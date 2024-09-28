@@ -3,6 +3,10 @@
 ### Car Model
 - name: String,
 - year: Number,
-- type: [typeSchema]
+- image: String,
+- reviews: [reviewsSchema]
 
-### 
+### Reviews
+- title: String,
+- rating: Number,
+- comment: String
