@@ -49,7 +49,7 @@
 
 
 ### Day 2
-
+9/29th fixed .env bug and 
 ### Day 3
 
 ### Day 4
