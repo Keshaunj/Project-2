@@ -33,6 +33,11 @@ app.get("/", async (req, res) => {
 
 app.use("/auth", authController);
 
+// secong page/landing page
+app.get('/second',(req,res)=>{
+  res.render('second.ejs');
+ });
+ 
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
