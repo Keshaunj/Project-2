@@ -49,11 +49,19 @@
 
 
 ### Day 2
-9/29th fixed .env bug and 
+-Implement sign in functionality with sessions
+-Sign the user in
+-Implement sign out functionality by deleting a session
+-Sign the user out
+-Working on CRUD routes
+-Building ejs files to create index, new, show, edit views
+-Creating nav links in partials folder
+-Styling the application
+
 ### Day 3
-9/30 made css ideas for landing page which is SECOND.EJS
+
 ### Day 4
-10/1 created css to get a idea of my layout. Not Final css styling but a mock styling to brainstrom visually what I and Kush would like.Added a refrence link to the path module and set view engine.
+
 ### Day 5
 
 ### Day 6
