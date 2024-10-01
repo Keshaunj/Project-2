@@ -1,0 +1,23 @@
+.default {
+    border: 4px solid black;
+    width: 200px;
+    height: 400px;
+    background-color: blue;
+    margin: 200px;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height:100vh;
+    width:100px
+
+}
+ 
+.inner-div{
+    border:3px solid grey;
+    /* grid-template-columns: repeat (3,1fr); */
+    margin: 40px;
+    display: grid;
+    grid-gap: 40px;
+   
+}

@@ -6,6 +6,14 @@ const app = express();
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const morgan = require("morgan");
+const path = require('path');
+//setting the view engine
+app.set('View engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+//server static files in art dir
+app.use('/art', express.static(path.join(__dirname,'art')));
+
+
 
 // Set the port from environment variable or default to 3000
 const port = process.env.PORT ? process.env.PORT : "3000";
