@@ -56,6 +56,7 @@
 -Working on CRUD routes
 -Building ejs files to create index, new, show, edit views
 -Creating nav links in partials folder
+-Styling the application
 
 ### Day 3
 

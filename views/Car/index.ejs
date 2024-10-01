@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cars Index Page</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 
 <body>
@@ -14,6 +15,20 @@
       <% Car.forEach(Car => { %>
         <li><a href="/Car/<%= Car._id %>"><%= Car.name %></a></li>
       <% }); %>
+    </ul>
+
+    <div class="index-header-div">
+      <h1>All Cars</h1>
+      <a class="add-Car" href="/Car/new">Add Car</a>
+    </div>
+    <ul>
+      <% Car.forEach((Car)=> { %>
+      <li>
+        <a class="Car-cards" href="/Car/<%=Car._id%>">
+          <%= Car.name %>
+        </a>
+      </li>
+      <% }) %>
     </ul>
 
     <a href="/">Go Back to Homepage</a> | <a href="/Car/new">Add new Car</a>
