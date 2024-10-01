@@ -60,5 +60,3 @@ res.redirect("/");
     req.session.destroy();
     res.redirect("/");
   });
-  
-  
