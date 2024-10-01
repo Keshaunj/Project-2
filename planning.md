@@ -49,6 +49,13 @@
 
 
 ### Day 2
+-Implement sign in functionality with sessions
+-Sign the user in
+-Implement sign out functionality by deleting a session
+-Sign the user out
+-Working on CRUD routes
+-Building ejs files to create index, new, show, edit views
+-Creating nav links in partials folder
 
 ### Day 3
 

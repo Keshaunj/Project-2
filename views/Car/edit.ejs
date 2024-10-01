@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Edit Page</title>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+    <h1>Car Edit - <%= Car.name %></h1>
+    <form method="POST" action="/Car/<%= Car._id %>?_method=PUT">
+      <div>
+        <label for="name">Car Name:</label>
+        <input type="text" name="name" id="name" value="<%= Car.name %>" />
+      </div>
+      
+
+      <button type="submit">Edit Car</button>
+    </form>
+  </body>
+</html>
