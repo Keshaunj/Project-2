@@ -11,7 +11,6 @@ router.get("/sign-up", (req, res) => {
     res.render("auth/sign-up.ejs");
   });
 
-
   router.post("/sign-up", async (req, res) => {
     res.send("Form submission accepted!");
     const userInDatabase = await User.findOne({ username: req.body.username });
@@ -34,3 +33,42 @@ res.send(`Thanks for signing up ${user.username}`);
     res.render("auth/sign-in.ejs");
   });
   
+  router.post("/sign-in", async (req, res) => {
+    const userInDatabase = await User.findOne({ username: req.body.username });
+if (!userInDatabase) {
+  return res.send("Login failed. Please try again.");
+}
+
+const validPassword = bcrypt.compareSync(
+  req.body.password,
+  userInDatabase.password
+);
+if (!validPassword) {
+  return res.send("Login failed. Please try again.");
+}
+
+req.session.user = {
+  username: userInDatabase.username,
+  _id: userInDatabase._id
+};
+
+res.redirect("/");
+  });
+  
+  router.get("/sign-out", (req, res) => {
+    req.session.destroy();
+    res.redirect("/");
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
