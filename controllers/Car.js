@@ -66,13 +66,7 @@ const getEditForm = async (req, res) => {
 
 const editCar = async (req, res) => {
   try {
-    // console.log(req.body, 'testing data from form')
-
-    if (req.body.isRead === "on") {
-      req.body.isRead = true;
-    } else {
-      req.body.isRead = false;
-    }
+    // console.log(req.body, 'testing data from form')    
 
     await Car.findByIdAndUpdate(req.params.id, req.body, { new: true });
 

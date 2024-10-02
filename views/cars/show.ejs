@@ -10,11 +10,10 @@
     <%- include('../partials/nav') %>
     <h1>Car Show Page</h1>
     <h2>Name: <%= Car.name %></h2>
- 
+
     <form method="POST" action="/Car/<%= Car._id %>?_method=DELETE">
       <button type="submit">Delete Car</button>
     </form>
-
     <section>
       <a href="/Car/<%= Car._id %>/edit">Edit Car</a>
     </section>
@@ -39,6 +38,5 @@
         <div class="edit-text">Edit <%= Car.name %></div>
       </a>
     </div>
-    
   </body>
 </html>
