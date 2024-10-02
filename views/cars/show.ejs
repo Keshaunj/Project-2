@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Show Page</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+    <h1>Car Show Page</h1>
+    <h2>Name: <%= Car.name %></h2>
+ 
+    <form method="POST" action="/Car/<%= Car._id %>?_method=DELETE">
+      <button type="submit">Delete Car</button>
+    </form>
+
+    <section>
+      <a href="/Car/<%= Car._id %>/edit">Edit Car</a>
+    </section>
+
+    <div class="Car-details">
+      <!-- show page content -->
+    </div>
+    <a class="Car-index-link" href="/Car">
+      <div class="index-link-text">Back to Cars</div>
+    </a>
+    <div class="Car-actions">
+      <form
+        class="delete-form"
+        action="/Car/<%=Car._id%>?_method=DELETE"
+        method="POST"
+      >
+        <button class="delete-button" type="submit">
+          Delete <%= Car.name %>
+        </button>
+      </form>
+      <a class="edit-link" href="/Car/<%= Car._id %>/edit">
+        <div class="edit-text">Edit <%= Car.name %></div>
+      </a>
+    </div>
+    
+  </body>
+</html>

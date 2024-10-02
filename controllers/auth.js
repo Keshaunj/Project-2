@@ -11,7 +11,6 @@ router.get("/sign-up", (req, res) => {
     res.render("auth/sign-up.ejs");
   });
 
-
   router.post("/sign-up", async (req, res) => {
     res.send("Form submission accepted!");
     const userInDatabase = await User.findOne({ username: req.body.username });
@@ -60,5 +59,16 @@ res.redirect("/");
     req.session.destroy();
     res.redirect("/");
   });
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
