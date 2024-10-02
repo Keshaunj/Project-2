@@ -57,8 +57,11 @@ app.get("/Car", CarController.getAllCars);
 app.post("/Car", CarController.createCar);
 app.delete("/Car/:id", CarController.deleteCar);
 app.get("/Car/:CarId/edit", CarController.getEditForm);
-app.get("/Car/:CarId/edit", CarController.getEditForm);
 app.use("/auth", authController);
+
+app.put('/Car/:id', CarController.editCar); //new code
+
+
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
 });
