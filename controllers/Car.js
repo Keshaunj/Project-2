@@ -4,7 +4,7 @@ const getAllCars = async (req, res) => {
   try {
     const allCars = await Car.find();
     console.log(allCars)
-    res.render("cars/index", { Car: allCars, message: "Hi there" });
+    res.render("Car/index", { Car: allCars, message: "Hi there" });
   } catch (err) {
     console.log(err);
     res.redirect("/");
@@ -17,7 +17,7 @@ const getOneCar = async (req, res) => {
     // findOne -> await Car.findOne({name: req.params.name})
     // const variable = await Model.findById()
     const contextData = { Car: foundCar };
-    res.render("cars/show", contextData);
+    res.render("Car/show", contextData);
   } catch (err) {
     console.log(err);
     res.redirect("/");
@@ -25,7 +25,7 @@ const getOneCar = async (req, res) => {
 };
 
 const getNewForm = (req, res) => {
-  res.render("cars/new");
+  res.render("Car/new");
 };
 
 const createCar = async (req, res) => {
@@ -57,7 +57,7 @@ const deleteCar = async (req, res) => {
 const getEditForm = async (req, res) => {
   try {
     const CarToEdit = await Car.findById(req.params.CarId);
-    res.render("cars/edit", { Car: CarToEdit });
+    res.render("Car/edit", { Car: CarToEdit });
   } catch (err) {
     console.log(err);
     res.redirect(`/`);
