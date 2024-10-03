@@ -64,6 +64,9 @@
 -Styling the application
 
 ### Day 3
+-working on edit routes
+-building a form for a new Car data entries
+-work on application of the second model in the show.ejs
 
 ### Day 4
 

@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap");
 
 body {
-  background: #fff8ed;
+  background: #e4bc7b;
   font-family: "DM Sans", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: 100vw;
+  text-align: center;
 }
 
 h1 {
@@ -30,7 +31,7 @@ footer {
 }
 
 .Car-index-link {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .index-link-text {
