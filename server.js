@@ -57,9 +57,10 @@ app.get("/Car", CarController.getAllCars);
 app.post("/Car", CarController.createCar);
 app.delete("/Car/:id", CarController.deleteCar);
 app.get("/Car/:CarId/edit", CarController.getEditForm);
+
 app.use("/auth", authController);
 
-app.put('/Car/:id', CarController.editCar); //new code
+app.put('/Car/:id', CarController.editCar); //edit route
 
 
 app.listen(port, () => {
