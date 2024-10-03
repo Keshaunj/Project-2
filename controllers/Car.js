@@ -13,16 +13,16 @@ const getAllCars = async (req, res) => {
 
 const getOneCar = async (req, res) => {
   try {
-    const foundCar = await Car.findById(req.params.id);
-    // findOne -> await Car.findOne({name: req.params.name})
-    // const variable = await Model.findById()
-    const contextData = { Car: foundCar };
-    res.render("cars/show", contextData);
+    const foundCar = await Car.findById(req.params.id); 
+    console.log(foundCar); 
+    const contextData = { Car: foundCar }; 
+    res.render("cars/show", contextData); 
   } catch (err) {
     console.log(err);
     res.redirect("/");
   }
 };
+
 
 const getNewForm = (req, res) => {
   res.render("cars/new");
@@ -88,6 +88,25 @@ const editCar = async (req, res) => {
   }
 };
 
+// the handle for reviews
+const newComment = async (req, res) => {
+  try {
+    const carId = req.params.id; 
+    const commentContent = req.body.content; 
+
+    await Car.findByIdAndUpdate(carId, {
+      $push: { comments: { comment: commentContent } } 
+    });
+
+    res.redirect(`/Car/${carId}`); 
+  } catch (error) {
+    console.error(error);
+    res.redirect(`/Car/${carId}`);
+  }
+};
+
+
+
 module.exports = {
   getAllCars,
   getOneCar,
@@ -96,4 +115,5 @@ module.exports = {
   editCar,
   getNewForm,
   getEditForm,
+  newComment
 };

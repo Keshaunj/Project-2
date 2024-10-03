@@ -13,3 +13,7 @@
 
 # ideas for css style divs
 -[Flex Column layout Idea(https://coder-coder.com/display-divs-side-by-side/)]
+
+# review form and post route
+-[functionality for our reviews form| authors: "Joshua" and "Megan" General Assembly Software Enginner Professors(https://git.generalassemb.ly/PT-SEB-Student-Resources/men-stack-fruits-associations)]
+-[additional form help from W3schools.com(https://www.w3schools.com/html/html_forms.asp)]

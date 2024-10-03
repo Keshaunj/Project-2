@@ -73,7 +73,10 @@ app.get("/Car", CarController.getAllCars);
 app.post("/Car", CarController.createCar);
 app.delete("/Car/:id", CarController.deleteCar);
 app.get("/Car/:CarId/edit", CarController.getEditForm);
-app.get("/Car/:CarId/edit", CarController.getEditForm);
+app.post('/Car/:id/comments', CarController.newComment);
+
+
+
 
 
 
