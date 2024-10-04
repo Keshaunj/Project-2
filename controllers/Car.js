@@ -13,16 +13,16 @@ const getAllCars = async (req, res) => {
 
 const getOneCar = async (req, res) => {
   try {
-    const foundCar = await Car.findById(req.params.id);
-    // findOne -> await Car.findOne({name: req.params.name})
-    // const variable = await Model.findById()
-    const contextData = { Car: foundCar };
-    res.render("cars/show", contextData);
+    const foundCar = await Car.findById(req.params.id); 
+    console.log(foundCar); 
+    const contextData = { Car: foundCar }; 
+    res.render("cars/show", contextData); 
   } catch (err) {
     console.log(err);
     res.redirect("/");
   }
 };
+
 
 const getNewForm = (req, res) => {
   res.render("cars/new");
@@ -56,13 +56,24 @@ const deleteCar = async (req, res) => {
 
 const getEditForm = async (req, res) => {
   try {
-    const CarToEdit = await Car.findById(req.params.CarId);
+    const CarToEdit = await Car.findById(req.params.id);
+    console.log(req.params.id)
+
+    if (!CarToEdit) {
+      console.log('Car ID:', req.params.id);
+      return res.redirect(`/`); 
+    }
+
     res.render("cars/edit", { Car: CarToEdit });
-  } catch (err) {
-    console.log(err);
-    res.redirect(`/`);
+  } catch (error) {
+    console.log("Cant find car", error);
+    res.redirect(`/`); 
   }
 };
+
+
+
+
 
 const editCar = async (req, res) => {
   try {
@@ -76,10 +87,7 @@ const editCar = async (req, res) => {
 
     await Car.findByIdAndUpdate(req.params.id, req.body, { new: true });
 
-    // findByIdAndUpdate - breakdown of arguments:
-    // 1. id - the resource _id property for looking the document
-    // 2. req.body - data from the form
-    // 3. {new: true} option is provided as an optional third argument
+   
 
     res.redirect(`/Car/${req.params.id}`);
   } catch (err) {
@@ -87,6 +95,25 @@ const editCar = async (req, res) => {
     res.redirect(`/Car/${req.params.id}`);
   }
 };
+
+// the handle for reviews
+const newComment = async (req, res) => {
+  try {
+    const carId = req.params.id; 
+    const commentContent = req.body.content; 
+
+    await Car.findByIdAndUpdate(carId, {
+      $push: { comments: { comment: commentContent } } 
+    });
+
+    res.redirect(`/Car/${carId}`); 
+  } catch (error) {
+    console.error(error);
+    res.redirect(`/Car/${carId}`);
+  }
+};
+
+
 
 module.exports = {
   getAllCars,
@@ -96,4 +123,5 @@ module.exports = {
   editCar,
   getNewForm,
   getEditForm,
+  newComment
 };

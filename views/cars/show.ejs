@@ -39,6 +39,17 @@
         <div class="edit-text">Edit <%= Car.name %></div>
       </a>
     </div>
-    
+    <form method="POST" action="/Car/<%= Car._id %>/comments">
+      <label for="commentContent"> Your Comment:</label>
+      <textarea id="commentContent" name="content" required></textarea>
+      <button type="submit"> Post Review</button>
+    </form>
+    <h3>Comments:</h3>
+<ul>
+    <% Car.comments.forEach(comment => { %>
+        <li><%= comment.comment %></li> 
+    <% }) %>
+</ul>
+
   </body>
 </html>

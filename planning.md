@@ -59,9 +59,11 @@
 -Styling the application
 
 ### Day 3
-
+-fixed reviews
 ### Day 4
-
+-reviews working changed schema to comments instead of reviews
+-deleted reviews Schema and changed it to comments Schema
+-removed mileage from car Schema and added Year to car Schema
 ### Day 5
 
 ### Day 6
