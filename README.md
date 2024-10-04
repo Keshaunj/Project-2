@@ -1,10 +1,12 @@
 # Building an app to choose eco-friendly, efficient car to drive for Uber.
 
-## dependices 
+## dependencies"
 --**Express**: web Framework
 --**Mongoose**: Remote database which is MognoDB
 --**Path**: Node.js module for settingup paths to files 
-
+--**Morgan**: middleware that logs HTTP requests and errors
+--**Method Override**:Create a new middleware function to override the req.method property with a new value. This value will be pulled from the provided getter
+--**Bcrypt**: responsible for encyprting password in remote database
 
 
 ### Refrences
