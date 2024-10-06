@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap");
 
 body {
-  background: #e4bc7b;
+  background: #93e47b;
   font-family: "DM Sans", sans-serif;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-  color: #769642;
+  color: #3512ab;
   font-size: 3.6em;
 }
 
@@ -35,7 +35,7 @@ footer {
 }
 
 .index-link-text {
-  background-color: #f47b5b;
+  background-color: #d01b9d;
   color: white;
   font-size: 1.4em;
   width: 10em;
@@ -43,7 +43,7 @@ footer {
   margin: 15px;
   border-radius: 25px;
   text-align: center;
-  box-shadow: 0 5px #ffbd59;
+  box-shadow: 0 5px #ed9108;
 }
 
 .index-link-text:hover {
@@ -62,7 +62,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: #ffbd59;
+  background-color: #00e7fc;
   padding: 20px 30px;
   border-radius: 20px;
   box-shadow: 5px 6px #f47b5b;
@@ -81,7 +81,7 @@ input {
 button {
   align-self: center;
   margin: 10px 4px 4px 4px;
-  background-color: #3f6a51;
+  background-color: #ff8c00;
   color: white;
   padding: 5px 10px;
   border-radius: 15px;
@@ -116,7 +116,7 @@ button:active {
   min-height: 100%;
 }
 .delete-button {
-  background-color: #f47b5b;
+  background-color: #ff4545;
   text-transform: uppercase;
   padding: 40px 15px;
   width: 70%;
@@ -131,7 +131,7 @@ button:active {
 }
 
 .edit-text {
-  background-color: #3f6a51;
+  background-color: #2d1eb3;
   text-transform: uppercase;
   padding: 40px 15px;
   font-size: 1.3em;
@@ -147,7 +147,7 @@ button:active {
 }
 
 .delete-button:hover {
-  background-color: #ffbd59;
+  background-color: #ff0000;
 }
 
 .delete-button:active {
@@ -155,7 +155,7 @@ button:active {
 }
 
 .edit-text:hover {
-  background-color: #769642;
+  background-color: #090b7f;
 }
 
 .edit-text:active {
