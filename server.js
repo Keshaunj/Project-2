@@ -4,6 +4,8 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const CarController = require("./controllers/Car.js");
+const commentsController = require("./controllers/comments.js");
+
 const methodOverride = require("method-override");
 const morgan = require("morgan");
 const path = require("path");
@@ -60,8 +62,10 @@ app.get("/Car/:CarId/edit", CarController.getEditForm);
 
 app.use("/auth", authController);
 
-app.put('/Car/:id', CarController.editCar); //edit route
+app.put("/Car/:id", CarController.editCar); //edit route
 
+app.post("/Car/:CarId/comments", commentsController.createComment);
+app.delete("/Car/:CarId/comments/:commentId", commentsController.deleteComment);
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);

@@ -9,13 +9,12 @@
 - name: String,
 - year: Number,
 - image: String,
-- mileage: Number,
 - review: [reviewSchema]
 
 ### Review
 
-- rating: Number,
 - comment: String
+- uploadedBy: String
 
 ### Application Flow Chart
 

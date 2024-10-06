@@ -3,7 +3,7 @@ const Car = require("../models/Car");
 const getAllCars = async (req, res) => {
   try {
     const allCars = await Car.find();
-    console.log(allCars)
+    console.log(allCars);
     res.render("Car/index", { Car: allCars, message: "Hi there" });
   } catch (err) {
     console.log(err);
@@ -37,7 +37,7 @@ const createCar = async (req, res) => {
 
   try {
     await Car.create(req.body);
-    res.redirect("/Car"); // redirect -> GET / address provided 
+    res.redirect("/Car"); // redirect -> GET / address provided
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
@@ -66,7 +66,7 @@ const getEditForm = async (req, res) => {
 
 const editCar = async (req, res) => {
   try {
-    // console.log(req.body, 'testing data from form')    
+    // console.log(req.body, 'testing data from form')
 
     await Car.findByIdAndUpdate(req.params.id, req.body, { new: true });
 
@@ -82,6 +82,20 @@ const editCar = async (req, res) => {
   }
 };
 
+const newComment = async (req, res) => {
+  try {
+    const carId = req.params.id;
+    const commentContent = req.body.content;
+    await Car.findByIdAndUpdate(carId, {
+      $push: { comments: { comment: commentContent } },
+    });
+    res.redirect(`/Car/${carId}`);
+  } catch (error) {
+    console.error(error);
+    res.redirect(`/Car/${carId}`);
+  }
+};
+
 module.exports = {
   getAllCars,
   getOneCar,
@@ -90,4 +104,5 @@ module.exports = {
   editCar,
   getNewForm,
   getEditForm,
+  newComment,
 };

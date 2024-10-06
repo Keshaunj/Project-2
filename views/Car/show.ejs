@@ -10,24 +10,75 @@
     <%- include('../partials/nav') %>
     <h1>Car Show Page</h1>
     <h2>Name: <%= Car.name %></h2>
+    <h2>Year: <%= Car.year %></h2>
+    <h2>Image: <%= Car.image %></h2>
 
-    <form method="POST" action="/Car/<%= Car._id %>?_method=DELETE">
-      <button type="submit">Delete Car</button>
-    </form>
-    <section>
-      <a href="/Car/<%= Car._id %>/edit">Edit Car</a>
+    <section class="display-comments">
+      <h2>Comments: <%= Car.comments.value %></h2>
+      <% if (Car.comments.length > 0) { %> <%
+      Car.comments.forEach(function(comment) { %>
+      <div class="comment">
+        <p class="comment-text"><%= comment.comment %></p>
+        <p class="comment-author">Posted by: <%= comment.uploadedBy %></p>
+        <form
+          method="POST"
+          action="/Car/<%= Car._id %>/comments/<%= comment._id %>?_method=DELETE"
+          class="delete-comment-form"
+        >
+          <button type="submit" class="delete-comment-btn">Delete comment</button>
+        </form>
+      </div>
+      <% }) %> <% } else { %>
+      <p>No comments yet. Be the first to comment!</p>
+      <% } %>
     </section>
+
+    <section class="comment-section">
+      <h2>Leave a Comment</h2>
+      <form method="POST" action="/Car/<%= Car._id %>/comments">
+        <div>
+          <label for="comment">Comment:</label>
+          <textarea name="comment" id="comment" rows="4" required></textarea>
+        </div>
+        <div>
+          <label for="uploadedBy">Your Name:</label>
+          <input type="text" name="uploadedBy" id="uploadedBy" required />
+        </div>
+        <button type="submit" class="submit-btn">Submit Comment</button>
+      </form>
+    </section>
+
+    <!-- <div class="actions">
+      <form method="POST" action="/Car/<%= Car._id %>?_method=DELETE">
+        <button type="submit" class="delete-btn">Delete this Car</button>
+      </form>
+      <div class="update-link">
+        <a href="/Car/<%= Car._id %>/edit" class="edit-btn">
+          <button>Update Car's Records</button>
+        </a>
+      </div>
+    </div> -->
+
+    <!-- <form method="POST" action="/Car/<%= Car._id %>?_method=DELETE">
+      <button type="submit">Delete Car</button>
+    </form> -->
+
+    <!-- <section>
+      <a href="/Car/<%= Car._id %>/edit">Edit Car</a>
+    </section> -->
 
     <div class="Car-details">
       <!-- show page content -->
     </div>
-    <a class="Car-index-link" href="/Car">
+
+    <!-- <a class="Car-index-link" href="/Car">
       <div class="index-link-text">Back to Cars</div>
-    </a>
+    </a> -->
+
     <div class="Car-actions">
       <form
         class="delete-form"
-        action="/Car/<%=Car._id%>?_method=DELETE"
+        action="/Car/<%= Car._id%>?_method=DELETE"
         method="POST"
       >
         <button class="delete-button" type="submit">
