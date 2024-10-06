@@ -53,21 +53,22 @@
 
 ### Day 2
 
--Implement sign in functionality with sessions
--Sign the user in
--Implement sign out functionality by deleting a session
--Sign the user out
--Working on CRUD routes
--Building ejs files to create index, new, show, edit views
--Creating nav links in partials folder
--Styling the application
+- Implement sign in functionality with sessions
+- Sign the user in
+- Implement sign out functionality by deleting a session
+- Sign the user out
+- Working on CRUD routes
+
 
 ### Day 3
--working on edit routes
--building a form for a new Car data entries
--work on application of the second model in the show.ejs
+- Building ejs files to create index, new, show, edit views
+- Creating nav links in partials folder
+- Styling the application
 
 ### Day 4
+- working on edit routes
+- building a form for a new Car data entries
+- work on application of the second model in the show.ejs
 
 ### Day 5
 
