@@ -11,7 +11,7 @@
   <%- include('../partials/nav') %>
     <h1><%= message %> - All Cars</h1>
     <ul>
-        <!-- EJS iterator -> loops over the Cars context variable - set inside of res.render( {}) -->
+     
       <% Car.forEach(Car => { %>
         <li><a href="/Car/<%= Car._id %>"><%= Car.name %></a></li>
       <% }); %>

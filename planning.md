@@ -1,77 +1,81 @@
-# Planning for Car app
+# Car App Planning Document
 
-## ERD (Entity Relationship Diagram) Data Model
-![image of my ERD](#)
+A full-stack web application that allows users to manage car listings, view details, and leave comments. Users can sign up, log in, and interact with the cars, while the app includes basic CRUD functionality for car records.
 
-### Car Model
-- name: String,
-- year: Number,
-- image: String,
-- mileage: Number,
-- review: [reviewSchema]
+---
 
-### Review
-- rating: Number,
-- comment: String
+## Table of Contents
+- [MVP Features](#mvp-features)
+- [Stretch Features](#stretch-features)
+- [Build Steps](#build-steps)
+- [References](#references)
 
-### Application Flow Chart
+---
 
-## References (Documentation used for quick access)
-- Canvas Study Materials
-- UNIT 2 Lecture and Support Recordings
+## MVP Features
+1. **Boilerplate Setup**
+   - Basic project setup with routing and server configuration.
 
-## MVP Feature
+2. **Run the Server**
+   - Make sure the Express server is running.
 
-- boilerplate
-- Make the server running
-- Connect to MONGO Database
-- GET route
+3. **Connect to MongoDB**
+   - Set up the database connection.
 
+4. **GET Route**
+   - Create a basic route to display content.
 
-## Icebox / Stretch
-- Add a User Model
-- register / login functional
+---
+
+## Stretch Features
+- Add a User model for user authentication.
+- Implement user registration and login functionality.
+
+---
 
 ## Build Steps
 
 ### Day 1
-- create repo
-- Build and run the server
-- build a landing page
-- create a views directory
-- create a basic route('/') and render index.ejs   from views directory
-- Create a Car model with mongoose in models directory
-- Adding controllers directory
-- Adding a navigation link to the landing page
-- Create a sign up page with a form
-- Create a new user account through the sign up route
-- Create a page with a form for users to sign in
-
+- Create the repository.
+- Build and run the server.
+- Set up a landing page.
+- Create a `views` directory.
+- Set up a basic route (`/`) and render `index.ejs` from the `views` directory.
+- Create a Car model using Mongoose in the `models` directory.
+- Set up a `controllers` directory.
+- Add a navigation link to the landing page.
+- Create a sign-up page with a form.
+- Create a route to register new user accounts.
+- Create a sign-in page with a form for existing users.
 
 ### Day 2
--Implement sign in functionality with sessions
--Sign the user in
--Implement sign out functionality by deleting a session
--Sign the user out
--Working on CRUD routes
--Building ejs files to create index, new, show, edit views
--Creating nav links in partials folder
--Styling the application
+- Implement sign-in functionality using sessions.
+- Sign the user in and manage sessions.
+- Implement sign-out functionality by deleting sessions.
+- Sign the user out.
+- Develop CRUD routes for cars (create, read, update, delete).
+- Build EJS templates for `index`, `new`, `show`, and `edit` views.
+- Create navigation links in the `partials` folder.
+- Style the application.
 
 ### Day 3
--fixed reviews
+- Fix issues with comments/reviews.
+
 ### Day 4
--reviews working changed schema to comments instead of reviews
--deleted reviews Schema and changed it to comments Schema
--removed mileage from car Schema and added Year to car Schema
-### Day 5
+- Finalize comment functionality:
+  - Changed schema from `reviews` to `comments`.
+  - Removed `mileage` from the Car schema and added `year`.
 
-### Day 6
+### Days 5-10
+- CSS styling edits and changes:
+  - Update page layouts for a more user-friendly interface.
+  - Improve the look and feel of navigation bars and forms.
+  - Add responsive design to ensure compatibility with mobile devices.
+  - Enhance the visual presentation of car listings and comments.
+  - Final touches on color schemes, fonts, and overall theme consistency.
 
-### Day 7
+---
 
-### Day 8
-
-### Day 9
-
-### Day 10
+## References
+- Canvas Study Materials
+- UNIT 2 Lecture and Support Recordings
