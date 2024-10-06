@@ -22,7 +22,7 @@ if (req.body.password !== req.body.confirmPassword) {
 }
 const hashedPassword = bcrypt.hashSync(req.body.password, 10);
 req.body.password = hashedPassword;
-// validation logic
+
 
 const user = await User.create(req.body);
 res.send(`Thanks for signing up ${user.username}`);

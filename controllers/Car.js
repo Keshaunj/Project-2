@@ -37,7 +37,7 @@ const createCar = async (req, res) => {
 
   try {
     await Car.create(req.body);
-    res.redirect("/Car"); // redirect -> GET / address provided 
+    res.redirect("/Car"); 
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
@@ -46,7 +46,7 @@ const createCar = async (req, res) => {
 const deleteCar = async (req, res) => {
   try {
     await Car.findByIdAndDelete(req.params.id);
-    // console.log(deletedCar, "response from db after deletion");
+    
     res.redirect("/Car");
   } catch (err) {
     console.log(err);
@@ -77,7 +77,7 @@ const getEditForm = async (req, res) => {
 
 const editCar = async (req, res) => {
   try {
-    // console.log(req.body, 'testing data from form')
+
 
     if (req.body.isRead === "on") {
       req.body.isRead = true;
@@ -96,7 +96,7 @@ const editCar = async (req, res) => {
   }
 };
 
-// the handle for reviews
+
 const newComment = async (req, res) => {
   try {
     const carId = req.params.id; 

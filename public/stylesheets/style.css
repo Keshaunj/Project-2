@@ -1,23 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"); /* Added bolder font weights */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"); 
 
 body {
-    background: #f2f4e5; /* Light olive background */
+    background: #f2f4e5; 
     font-family: "DM Sans", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     max-width: 100vw;
-    color: #3b3b3b; /* Dark gray text color for contrast */
+    color: #3b3b3b; 
 }
-
 h1 {
-    color: #556b2f; /* Olive green color for the header */
-    font-size: 4em; /* Increased font size for more impact */
-    font-weight: 700; /* Bold font weight */
-    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.7), /* Soft white shadow */
-                 3px 3px 0 rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
-    letter-spacing: 1px; /* Increased spacing for a more dramatic look */
+    color: #556b2f; 
+    font-size: 4em; 
+    font-weight: 700;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.7), 
+                 3px 3px 0 rgba(0, 0, 0, 0.3); 
+    letter-spacing: 1px; 
 }
 
 footer {
@@ -28,7 +27,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: 10px;
-    background-color: #ffffff; /* White footer for contrast */
+    background-color: #ffffff;
 }
 
 .Car-pic1 {
@@ -40,7 +39,7 @@ footer {
 }
 
 .index-link-text {
-    background-color: #8fbc8f; /* Light olive green */
+    background-color: #8fbc8f; 
     color: white;
     font-size: 1.4em;
     width: 10em;
@@ -48,18 +47,18 @@ footer {
     margin: 15px;
     border-radius: 25px;
     text-align: center;
-    box-shadow: 0 5px rgba(143, 188, 143, 0.7); /* Light olive shadow */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
-    font-weight: 700; /* Bold font weight */
+    box-shadow: 0 5px rgba(143, 188, 143, 0.7); 
+    transition: background-color 0.3s, box-shadow 0.3s; 
+    font-weight: 700; 
 }
 
 .index-link-text:hover {
-    background-color: #98fb98; /* Lighter olive green on hover */
-    box-shadow: 0 5px rgba(143, 188, 143, 0.9); /* Brighter shadow */
+    background-color: #98fb98; 
+    box-shadow: 0 5px rgba(143, 188, 143, 0.9); 
 }
 
 .index-link-text:active {
-    background-color: #6b8e23; /* Dark olive green on active */
+    background-color: #6b8e23; 
     box-shadow: 0 2.5px rgba(143, 188, 143, 0.5);
 }
 
@@ -69,10 +68,10 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-color: #ffffff; /* White form background for contrast */
+    background-color: #ffffff; 
     padding: 20px 30px;
     border-radius: 20px;
-    box-shadow: 5px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 5px 6px rgba(0, 0, 0, 0.1); 
     margin: 20px 10px;
 }
 
@@ -83,28 +82,28 @@ form {
 label,
 input {
     margin: 10px 2px 0 2px;
-    color: #3b3b3b; /* Dark gray color for labels */
+    color: #3b3b3b; 
 }
 
 button {
     align-self: center;
     margin: 10px 4px 4px 4px;
-    background-color: #8fbc8f; /* Light olive green */
+    background-color: #8fbc8f; 
     color: white;
     padding: 5px 10px;
     border-radius: 15px;
     border: none;
     width: 15em;
-    transition: background-color 0.3s; /* Smooth transition */
-    font-weight: 700; /* Bold font weight */
+    transition: background-color 0.3s; 
+    font-weight: 700; 
 }
 
 button:hover {
-    background-color: #98fb98; /* Lighter olive green on hover */
+    background-color: #98fb98; 
 }
 
 button:active {
-    background-color: #6b8e23; /* Darker olive green on active */
+    background-color: #6b8e23; 
 }
 
 .Car-actions {
@@ -127,7 +126,7 @@ button:active {
 }
 
 .delete-button {
-    background-color: #ff3b30; /* Bright red for delete */
+    background-color: #ff3b30; 
     text-transform: uppercase;
     padding: 20px 15px;
     width: 70%;
@@ -141,7 +140,7 @@ button:active {
 }
 
 .edit-text {
-    background-color: #8fbc8f; /* Light olive green */
+    background-color: #8fbc8f; 
     text-transform: uppercase;
     padding: 20px 15px;
     font-size: 1.3em;
@@ -150,29 +149,29 @@ button:active {
     justify-content: center;
     align-items: center;
     color: white;
-    font-weight: 700; /* Bold font weight */
+    font-weight: 700; 
     text-align: center;
     width: 70%;
     height: 50px;
 }
 
 .delete-button:hover {
-    background-color: #ff6f61; /* Lighter red on hover */
+    background-color: #ff6f61; 
 }
 
 .delete-button:active {
-    background-color: #c72c26; /* Darker red on active */
+    background-color: #c72c26; 
 }
 
 .edit-text:hover {
-    background-color: #98fb98; /* Lighter olive green on hover */
+    background-color: #98fb98; 
 }
 
 .edit-text:active {
-    background-color: #6b8e23; /* Darker olive green on active */
+    background-color: #6b8e23; 
 }
 
-/* Index styling */
+
 ul {
     display: flex;
     flex-wrap: wrap;
@@ -186,27 +185,27 @@ li {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    color: #3b3b3b; /* Dark gray text */
-    width: 250px; /* Set a fixed width */
-    height: 200px; /* Set a fixed height */
-    background-color: #ffffff; /* White background for cards */
+    color: #3b3b3b; 
+    width: 250px; 
+    height: 200px; 
+    background-color: #ffffff; 
     margin: 10px 15px;
-    padding: 20px; /* Reduced padding for card */
+    padding: 20px; 
     border-radius: 15px;
     align-items: center;
     justify-content: center;
-    border: 2.5px solid #8fbc8f; /* Light olive green border */
-    transition: border-color 0.3s; /* Smooth transition */
+    border: 2.5px solid #8fbc8f; 
+    transition: border-color 0.3s; 
 }
 
 .Car-cards:hover {
-    border: 4px solid #98fb98; /* Brighter olive green on hover */
+    border: 4px solid #98fb98; 
 }
 
 .Car-cards:active {
-    background-color: #f0f0f0; /* Light gray on active */
-    border: 2.5px solid #6b8e23; /* Darker olive green on active */
-    color: #555; /* Darker gray on active */
+    background-color: #f0f0f0; 
+    border: 2.5px solid #6b8e23; 
+    color: #555; 
 }
 
 .index-header-div {
@@ -225,16 +224,16 @@ li {
     text-decoration: none;
     width: 6em;
     text-transform: uppercase;
-    background-color: #8fbc8f; /* Light olive green */
+    background-color: #8fbc8f; 
     border-radius: 30px;
     color: white;
     padding: 10px;
-    font-weight: 700; /* Bold font weight */
-    font-size: 1.2em; /* Increased font size */
+    font-weight: 700; 
+    font-size: 1.2em; 
 }
 
 img {
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Responsive images */
+    height: auto; 
+    max-width: 100%; 
     margin: 20px 0;
 }
