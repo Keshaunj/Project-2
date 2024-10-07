@@ -10,14 +10,11 @@ const methodOverride = require("method-override");
 const morgan = require("morgan");
 const path = require("path");
 
-const session = require('express-session');
-
-
+const session = require("express-session");
 
 const port = process.env.PORT ? process.env.PORT : "3000";
 
 const authController = require("./controllers/auth.js");
-
 
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -30,7 +27,6 @@ mongoose.connection.on("error", (err) => {
 
 const Car = require("./models/Car");
 
-
 app.set("view engine", "ejs");
 
 app.use(express.urlencoded({ extended: false }));
@@ -38,10 +34,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 
 app.use(methodOverride("_method"));
-app.use(morgan('dev'));
+app.use(morgan("dev"));
 
 app.use(express.static(path.join(__dirname, "public")));
-
 
 app.use(
   session({
@@ -50,8 +45,6 @@ app.use(
     saveUninitialized: true,
   })
 );
-
-
 
 app.get("/", (req, res) => {
   res.render("index.ejs", {
@@ -73,15 +66,10 @@ app.get("/Car", CarController.getAllCars);
 app.post("/Car", CarController.createCar);
 app.delete("/Car/:id", CarController.deleteCar);
 app.get("/Car/:id/edit", CarController.getEditForm);
-app.post('/Car/:id/comments', CarController.newComment);
-app.put("/Car/:id",CarController.editCar)
-
-
-
-
+app.post("/Car/:id/comments", CarController.newComment);
+app.put("/Car/:id", CarController.editCar);
 
 app.use("/auth", authController);
-
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
