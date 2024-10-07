@@ -9,29 +9,27 @@
 
 <body>
   <%- include('../partials/nav') %>
-    <h1><%= message %> - All Cars</h1>
-    <ul>
-     
-      <% Car.forEach(Car => { %>
-        <li><a href="/Car/<%= Car._id %>"><%= Car.name %></a></li>
-      <% }); %>
-    </ul>
 
-    <div class="index-header-div">
-      <h1>All Cars</h1>
-      <a class="add-Car" href="/Car/new">Add Car</a>
-    </div>
-    <ul>
-      <% Car.forEach((Car)=> { %>
+  <div class="index-header-div">
+    <h1>All Cars</h1>
+    <a class="add-Car" href="/Car/new">Add Car</a>
+  </div>
+
+  <ul>
+    <% Car.forEach((Car)=> { %>
       <li>
         <a class="Car-cards" href="/Car/<%=Car._id%>">
           <%= Car.name %>
-        </a>
+        </a> 
+        | <a href="/Car/<%= Car._id %>/edit">Edit</a>
+        | <form action="/Car/<%= Car._id %>?_method=DELETE" method="POST" style="display:inline;">
+            <button type="submit">Delete</button>
+          </form>
       </li>
-      <% }) %>
-    </ul>
+    <% }) %>
+  </ul>
 
-    <a href="/">Go Back to Homepage</a> | <a href="/Car/new">Add new Car</a>
-  </body>
-  
+  <a href="/">Go Back to Homepage</a>
+
+</body>
 </html>
