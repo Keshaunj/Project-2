@@ -3,7 +3,7 @@ const Car = require("../models/Car");
 const getAllCars = async (req, res) => {
   try {
     const allCars = await Car.find();
-    console.log(allCars)
+    console.log(allCars);
     res.render("cars/index", { Car: allCars, message: "Hi there" });
   } catch (err) {
     console.log(err);
@@ -13,16 +13,15 @@ const getAllCars = async (req, res) => {
 
 const getOneCar = async (req, res) => {
   try {
-    const foundCar = await Car.findById(req.params.id); 
-    console.log(foundCar); 
-    const contextData = { Car: foundCar }; 
-    res.render("cars/show", contextData); 
+    const foundCar = await Car.findById(req.params.id);
+    console.log(foundCar);
+    const contextData = { Car: foundCar };
+    res.render("cars/show", contextData);
   } catch (err) {
     console.log(err);
     res.redirect("/");
   }
 };
-
 
 const getNewForm = (req, res) => {
   res.render("cars/new");
@@ -37,7 +36,7 @@ const createCar = async (req, res) => {
 
   try {
     await Car.create(req.body);
-    res.redirect("/Car"); 
+    res.redirect("/Car");
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
@@ -46,7 +45,7 @@ const createCar = async (req, res) => {
 const deleteCar = async (req, res) => {
   try {
     await Car.findByIdAndDelete(req.params.id);
-    
+
     res.redirect("/Car");
   } catch (err) {
     console.log(err);
@@ -57,28 +56,22 @@ const deleteCar = async (req, res) => {
 const getEditForm = async (req, res) => {
   try {
     const CarToEdit = await Car.findById(req.params.id);
-    console.log(req.params.id)
+    console.log(req.params.id);
 
     if (!CarToEdit) {
-      console.log('Car ID:', req.params.id);
-      return res.redirect(`/`); 
+      console.log("Car ID:", req.params.id);
+      return res.redirect(`/`);
     }
 
     res.render("cars/edit", { Car: CarToEdit });
   } catch (error) {
     console.log("Cant find car", error);
-    res.redirect(`/`); 
+    res.redirect(`/`);
   }
 };
 
-
-
-
-
 const editCar = async (req, res) => {
   try {
-
-
     if (req.body.isRead === "on") {
       req.body.isRead = true;
     } else {
@@ -87,8 +80,6 @@ const editCar = async (req, res) => {
 
     await Car.findByIdAndUpdate(req.params.id, req.body, { new: true });
 
-   
-
     res.redirect(`/Car/${req.params.id}`);
   } catch (err) {
     console.log(err);
@@ -96,24 +87,21 @@ const editCar = async (req, res) => {
   }
 };
 
-
 const newComment = async (req, res) => {
   try {
-    const carId = req.params.id; 
-    const commentContent = req.body.content; 
+    const carId = req.params.id;
+    const commentContent = req.body.content;
 
     await Car.findByIdAndUpdate(carId, {
-      $push: { comments: { comment: commentContent } } 
+      $push: { comments: { comment: commentContent } },
     });
 
-    res.redirect(`/Car/${carId}`); 
+    res.redirect(`/Car/${carId}`);
   } catch (error) {
     console.error(error);
     res.redirect(`/Car/${carId}`);
   }
 };
-
-
 
 module.exports = {
   getAllCars,
@@ -123,5 +111,5 @@ module.exports = {
   editCar,
   getNewForm,
   getEditForm,
-  newComment
+  newComment,
 };
