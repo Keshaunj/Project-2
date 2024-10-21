@@ -1,33 +1,28 @@
-# Building an app to choose eco-friendly, efficient car to drive for Uber.
+# Eco-Friendly Uber Car Selection App
 
-## dependices 
---**Express**: web Framework
---**Mongoose**: Remote database which is MognoDB
---**Path**: Node.js module for settingup paths to files 
+## NAME:
+Car for Uber App
 
+## Description
+This application is designed to help users choose eco-friendly and efficient cars for driving with Uber. It provides functionalities for users to review various car models, ensuring they select the best options for their rideshare needs.
 
+---
 
-### Refrences
-# help with css to display thanks to  geeksforgeeks.org with the link below
--[how to setup view enigne in Node.js(https://www.geeksforgeeks.org/how-to-setup-view-engine-in-node-js/)]
+## Dependencies
+- **Express**: A web framework for building web applications.
+- **Mongoose**: An ODM (Object Data Modeling) library for MongoDB and Node.js.
+- **Path**: A Node.js module for handling and transforming file paths.
+- **Morgan**: A middleware that logs HTTP requests and errors for better debugging.
+- **Method Override**: A middleware function that allows overriding the `req.method` property with a new value.
+- **Bcrypt**: A library for hashing passwords before storing them in a remote database.
 
-# ideas for css style divs
--[Flex Column layout Idea(https://coder-coder.com/display-divs-side-by-side/)]
+---
 
-## Screenshot/Logo:
-- A screenshot of your app or a logo.
+## References
+- **CSS Display Help**: Thanks to [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-setup-view-engine-in-node-js/) for assistance with setting up view engines in Node.js.
+  
+- **CSS Flexbox Layout**: Inspiration for CSS styles and div layout from [Coder Coder](https://coder-coder.com/display-divs-side-by-side/).
 
-## Your app’s name:
-- Include a description of your app and its functionality. Background info about the app and why you built it is a nice touch.
+- **Review Form and Post Route**: Functionality guidance for the reviews form from [General Assembly Software Engineering Professors (Joshua and Megan)](https://git.generalassemb.ly/PT-SEB-Student-Resources/men-stack-fruits-associations) and additional form help from [W3Schools](https://www.w3schools.com/html/html_forms.asp).
 
-## Getting started: 
-- Include a link to your deployed app and a link to your planning materials.
-
-## Attributions: 
-- This section should include links to any external resources (such as libraries or assets) you used to develop your application that require attribution. You can exclude this section if it does not apply to your application.
-
-## Technologies used:
-- List of the technologies used, for example: JavaScript and any major frameworks or libraries.
-
-## Next steps:
-- Planned future enhancements (stretch goals).
+---

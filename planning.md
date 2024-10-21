@@ -1,8 +1,8 @@
 # Planning for Car app
+A full-stack web application that allows users to manage car listings, view details, and leave comments. Users can sign up, log in, and interact with the cars, while the app includes basic CRUD functionality for car records.
 
-## ERD (Entity Relationship Diagram) Data Model
+---
 
-![image of my ERD](#)
 
 ### Car Model
 
@@ -11,7 +11,7 @@
 - image: String,
 - review: [reviewSchema]
 
-### Review
+### Reviews Model
 
 - comment: String
 - uploadedBy: String
@@ -23,17 +23,26 @@
 - Canvas Study Materials
 - UNIT 2 Lecture and Support Recordings
 
-## MVP Feature
+## MVP Features
+1. **Boilerplate Setup**
+   - Basic project setup with routing and server configuration.
 
-- boilerplate
-- Make the server running
-- Connect to MONGO Database
-- GET route
+2. **Run the Server**
+   - Make sure the Express server is running.
 
-## Icebox / Stretch
+3. **Connect to MongoDB**
+   - Set up the database connection.
 
-- Add a User Model
-- register / login functional
+4. **GET Route**
+   - Create a basic route to display content.
+
+---
+
+## Stretch Features
+- Add a User model for user authentication.
+- Implement user registration and login functionality.
+
+---
 
 ## Build Steps
 
@@ -70,14 +79,16 @@
 - building a form for a new Car data entries
 - work on application of the second model in the show.ejs
 
-### Day 5
+### Days 5-10
+- CSS styling edits and changes:
+  - Update page layouts for a more user-friendly interface.
+  - Improve the look and feel of navigation bars and forms.
+  - Add responsive design to ensure compatibility with mobile devices.
+  - Enhance the visual presentation of car listings and comments.
+  - Final touches on color schemes, fonts, and overall theme consistency.
 
-### Day 6
+---
 
-### Day 7
-
-### Day 8
-
-### Day 9
-
-### Day 10
+## References
+- Canvas Study Materials
+- UNIT 2 Lecture and Support Recordings
